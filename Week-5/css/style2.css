@@ -1,0 +1,18 @@
+.images
+  {
+       position: fixed;
+       bottom: 20px;
+       left: calc(50vw - 300px);
+  }
+
+.increase 
+  {
+     position: fixed;
+     top: 30px;
+     left: calc(50vw - 300px);
+  }
+
+body
+  {
+       background-color: black;
+  }

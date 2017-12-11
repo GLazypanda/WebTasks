@@ -1,0 +1,65 @@
+body
+  {
+       background-color: #f3f5f6;
+  }
+.menu
+  {
+       padding-left: 10px;
+  }
+.menu a
+  {
+       font-weight: bold;
+       color: green;
+  }
+.item
+  {
+       font-family: arial;
+       border: 1px red solid;
+       margin: 10px;
+       width: 450px;
+       border-radius: 10px;
+       padding: 20px;
+  }
+.item.urgent
+  {
+       background-color: yellow;
+  }
+.image
+  {
+       margin: 5px;
+       width: 100px;
+       height: auto;
+       float: left;
+  }
+.title
+  {
+       padding: 5px;
+  }
+.title a
+  {
+       font-size: 16pt;
+  }
+.text_for
+  {
+       font-size: 10pt;
+       font-weight: bold;
+  }
+.price
+  {
+       padding: 1px;
+       color: green;
+       background-color: #fdd;
+       border-radius: 5px;
+  }
+.description
+  {
+       margin: 5px;
+  }
+.attributes
+  {
+       font-size: 9pt;
+  }
+.city
+  {
+       font-weight: bold;
+  }

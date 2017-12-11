@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style>
+      #cards .card {
+         border: 1px solid red;
+         display: flex;
+         width: 300px;
+      }
+
+      #cards .card .title {
+         flex-grow: 1;
+      }
+
+      #cards .card .price {
+         font-weight: bold;
+         padding-right: 20px;
+      }
+
+      #loading {
+         display: none;
+      }
+
+      #cards {
+         width: 300px;
+         height: 200px;
+         border: 1px solid blue;
+      }
+   </style>
+
+</head>
+
+<body>
+   <button>Load</button>
+   <div id="cards">
+      <img width="300px" height="200px" id="loading" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
+   </div>
+
+   <script defer>
+      function onStreamProcessed(json) {
+         document.getElementById('cards').innerHTML = "";
+         let listCards = json;
+         for (let i = 0; i < listCards.length; i++) {
+            console.log(listCards[i]);
+            let div = document.createElement('div');
+            div.className = "card";
+            let title = document.createElement('div');
+            title.className = "title";
+            title.innerHTML = listCards[i]["maker"] + " " + listCards[i]["model"];
+            div.appendChild(title);
+            let price = document.createElement('div');
+            price.className = "price";
+            price.innerHTML = listCards[i]["price"];
+            div.appendChild(price);
+            document.getElementById('cards').appendChild(div);
+         }
+         document.querySelector('button').innerHTML = "Items are Loaded";
+      }
+
+      function onResponse(response) {
+         return response.json();
+      }
+
+      function onError(error) {
+         console.log('Error: ' + error);
+      }
+
+      function displayCards() {
+         document.querySelector('button').innerHTML = "Loading...";
+         document.getElementById('loading').style.display = "flex";
+         const listCards = fetch('http://demo4296963.mockable.io/listCars').then(onResponse, onError);
+         listCards.then(onStreamProcessed);
+      }
+
+      document.querySelector('button').addEventListener("click", displayCards);
+   </script>
+</body>
+
+</html>

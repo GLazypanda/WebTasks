@@ -1,0 +1,30 @@
+row
+  {
+       margin: 0px;
+  }
+.matrix
+  {
+      *padding: 15px;
+       margin: 0px;
+  }
+.row input[type=text]
+  {
+       margin: 0;
+  }
+input[type=text]
+  {
+       font-size: 30pt;
+       height: 50px;
+       width: 100px;
+       padding: 20px 20px;
+       margin: 0px 0px 0px 0px;
+  }
+button
+  {
+       margin: 10px;
+       height: 50px;
+       width: 200px;
+       font-size: 16pt;
+       color: #267545;
+  }
+#answer{font-size: 40pt}

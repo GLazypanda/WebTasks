@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <link rel="stylesheet" href="css/style1.css">
+          <script src="js/determinant.js" defer></script>
+          <title>Intro to JS</title>
+     </head>
+     <body>
+          <div class="matrix">
+               <div class="row">
+                    <input type="text" id="n11" value="1"/>
+               	<input type="text" id="n12" value="1"/>
+               	<input type="text" id="n13" value="1"/>
+               </div>
+               <div class="row">
+                    <input type="text" id="n21" value="1"/>
+               	<input type="text" id="n22" value="1"/>
+               	<input type="text" id="n23" value="1"/>
+               </div>
+               <div class="row">
+                    <input type="text" id="n31" value="1"/>
+                    <input type="text" id="n32" value="1"/>
+               	<input type="text" id="n33" value="1"/>
+               </div>
+          </div>
+          <div class="">
+               <button id = "button" type="button" onclick="find_determinant()">Find Determinant</button>
+          </div>
+          <div>
+               <p id = "answer"></p>
+          </div>
+     </body>
+</html>
